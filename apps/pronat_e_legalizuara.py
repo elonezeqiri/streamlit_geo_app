@@ -22,7 +22,7 @@ def app():
         buildings_dict[file_name.split('/')[-1].split('.')[0]] = gpd.read_file(file_name)
 
 
-    kati = st.selectbox(label = 'caktoni katin', options=file_names)
+    kati = st.selectbox(label = 'caktoni katin', options=file_names, index = 2)
 
     m = leafmap.Map(minimap = True, draw_export = True, png_enabled = True)
     m.add_gdf(buildings_dict[kati], info_mode = 'on_click', layer_name = f'Kati {kati}')
