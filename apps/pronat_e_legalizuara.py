@@ -24,14 +24,9 @@ def app():
 
     m = leafmap.Map(minimap = True, draw_export = True, png_enabled = True)
     m.add_gdf(buildings_dict[kati], info_mode = 'on_click', layer_name = f'Kati {kati}')
-    # m.add_marker([42.421164, 21.421052])
     
     m.fit_bounds(m.get_bounds(), padding=(30, 30))
     # m.add_basemap("HYBRID")
 
-
-
-
-    # # m.
     # LocateControl(auto_start=False).add_to(m)
     m.to_streamlit(height=700)
