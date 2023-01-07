@@ -28,7 +28,7 @@ def app():
     m.add_gdf(buildings_dict[kati], info_mode = 'on_click', layer_name = f'Kati {kati}')
     
     m.fit_bounds(m.get_bounds(), padding=(30, 30))
-    m.add_basemap("HYBRID")
+    # m.add_basemap("HYBRID")
 
     # LocateControl(auto_start=False).add_to(m)
     m.to_streamlit(height=700)
