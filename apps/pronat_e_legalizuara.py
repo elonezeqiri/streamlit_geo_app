@@ -5,7 +5,7 @@ import geopandas as gpd
 import os
 
 def app():
-    st.title("Ndertesat e legalizuara ne Gjilan")
+    st.title("Ndertesat e regjistruara ne Gjilan")
 
     st.markdown(
         "Add description Here!"
