@@ -15,6 +15,8 @@ def app():
 
     file_names = [x.split('/')[-1].split('.')[0] for x in file_paths]
 
+    file_names = sorted(file_names)
+
     buildings_dict = {}
     for file_name in file_paths:
         buildings_dict[file_name.split('/')[-1].split('.')[0]] = gpd.read_file(file_name)
