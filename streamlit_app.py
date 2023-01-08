@@ -9,8 +9,8 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide", )
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
-    {"func": trashegimia_kulturore.app, "title": "Trashegimia kulturore", "icon": "house"},
-     {"func": pronat_e_legalizuara.app, "title": "Ndertesat ne Gjilan", "icon": "map"},
+    {"func": trashegimia_kulturore.app, "title": "Objektet në mbrojtje", "icon": "house"},
+     {"func": pronat_e_legalizuara.app, "title": "Ndërtesat në Gjilan", "icon": "map"},
 ]
 
 titles = [app["title"] for app in apps]
@@ -26,7 +26,7 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "Meny Kryesore:",
         options=titles,
         icons=icons,
         menu_icon="cast",
@@ -40,10 +40,12 @@ with st.sidebar:
         """
     )
     
-    st.sidebar.title("Gjeo-Portali i Kosoves")
+    st.sidebar.title("Referenca:")
 
-    st.sidebar.write('[Gjeoportali i Republikes se Kosoves](http://geoportal.rks-gov.net)')
-
+    st.sidebar.write('[Gjeoportali shtetëror i Kosovës](http://geoportal.rks-gov.net)')
+    st.sidebar.write('[Agjencioni Kadastral i Kosovës](https://akk.rks-gov.net/sq)')
+    st.sidebar.write('[Objektet në mbrojtje të përkohshme](https://www.mkrs-ks.org/repository/docs/Vendim_i_Ministrit_MKRS_per_Mbrojtje_te_Perkohshme_2022-2023.pdf)')
+    
 for app in apps:
     if app["title"] == selected:
         app["func"]()
