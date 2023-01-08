@@ -6,10 +6,10 @@ import geopandas as gpd
 import os
 
 def app():
-    st.title("Vendet e klasifikuara si trashegimi kulturore ne Gjilan")
+    st.title("Objektet në mbrojtje të përkohshme")
 
     st.markdown(
-        "....."
+        "Bazuar në Vendimin nr.149/2022, dt.07.10.22, Objektet të cilat janë në mbrojtje të përkohshme brenda komunës së Gjilanit janë të paraqitura në hartën në vijim. Klikoni mbi markerin blu dhe do keni të dhëna shtesë për këto objekte."
     )
 
     dataset = pd.read_pickle('data/zonat_e_mbrojtura.pkl')
