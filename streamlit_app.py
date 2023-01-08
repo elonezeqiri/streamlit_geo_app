@@ -39,10 +39,10 @@ with st.sidebar:
         Punimi në lëndën WebGis
 
         Punoi: Elonë Zeqiri
-        email: elone.zeqiri@gmail.com
+         elone.zeqiri@gmail.com
 
         Profesor i lëndës: Bashkim Idrizi
-        email: bashkim.idrizi@uni-pr.edu
+          bashkim.idrizi@uni-pr.edu
 
         """
     )
