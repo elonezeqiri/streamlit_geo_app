@@ -25,7 +25,7 @@ def save_uploaded_file(file_content, file_name):
 
 def app():
 
-    st.title("Ngarkoni të dhëna:)
+    st.title("Ngarkoni të dhëna:")
 
 
     row1_col1, row1_col2 = st.columns([2, 1])
