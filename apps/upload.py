@@ -25,7 +25,15 @@ def save_uploaded_file(file_content, file_name):
 
 def app():
 
-    st.title("Upload Vector Data")
+    st.title("Ngarkoni të dhëna:)
+
+ st.markdown(
+        """
+    Tek butoni "Browse files", bëni përzgjedhjen e file Geojson, Kml, Zip apo Tab.
+     Pas ngarkimit të dhënat do të paraqiten në hartë...
+
+    """
+    )
 
     row1_col1, row1_col2 = st.columns([2, 1])
     width = 950
