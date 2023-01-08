@@ -5,10 +5,10 @@ import geopandas as gpd
 import os
 
 def app():
-    st.title("Ndertesat e regjistruara në Kadastër, zona kadastrale Gjilan")
+    st.title("Ndertesat e regjistruara në Kadastër")
 
     st.markdown(
-        "Harta me ndërtesat dhe pjesët e ndërtesës të cilat janë të regjistruara në Kadastër")
+        "Harta me ndërtesat dhe pjesët e ndërtesës të cilat janë të regjistruara në Kadastër, në zonën kadastrale Gjilan.")
     
 
     file_paths = [f'data/ndertesat_data/{file}' for file in os.listdir('data/ndertesat_data') if file.endswith(".shp")]
@@ -22,7 +22,7 @@ def app():
         buildings_dict[file_name.split('/')[-1].split('.')[0]] = gpd.read_file(file_name)
 
 
-    kati = st.selectbox(label = 'Zgjedhni katin:', options=file_names, index = 2)
+    kati = st.selectbox(label = 'Zgjedhni katin të cilin dëshironi ta shfaqni:', options=file_names, index = 2)
 
     m = leafmap.Map(minimap = True, draw_export = True, png_enabled = True)
     m.add_gdf(buildings_dict[kati], info_mode = 'on_click', layer_name = f'Kati {kati}')
