@@ -8,8 +8,8 @@ def app():
     st.title("Ndertesat e regjistruara në Kadastër, zona kadastrale Gjilan")
 
     st.markdown(
-        "Harta me ndërtesat dhe pjesët e ndërtesës të cilat janë të regjistruara në Kadastër""
-    )
+        "Harta me ndërtesat dhe pjesët e ndërtesës të cilat janë të regjistruara në Kadastër")
+    
 
     file_paths = [f'data/ndertesat_data/{file}' for file in os.listdir('data/ndertesat_data') if file.endswith(".shp")]
 
