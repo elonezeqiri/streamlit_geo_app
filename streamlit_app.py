@@ -26,17 +26,24 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "Meny Kryesore:",
+        "Menu:",
         options=titles,
         icons=icons,
         menu_icon="cast",
         default_index=default_index,
     )
 
-    st.sidebar.title("About")
+    st.sidebar.title("Kontakte:")
     st.sidebar.info(
         """
-        EZ - Geodesy Interactive Web App        
+        Punimi në lëndën WebGis
+
+        Punoi: Elonë Zeqiri
+        email: elone.zeqiri@gmail.com
+
+        Profesor i lëndës: Bashkim Idrizi
+        email: bashkim.idrizi@uni-pr.edu
+
         """
     )
     
