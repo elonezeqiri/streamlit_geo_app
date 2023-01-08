@@ -4,11 +4,11 @@ from folium.plugins import LocateControl
 import geopandas as gpd
 
 def app():
-    st.title("Home")
+    st.title("Harta e Kosovës")
 
     st.markdown(
         """
-    insert text here____
+    Paraqitja e kufinjëve administrativ të komunave të Kosovës
 
     """
     )
