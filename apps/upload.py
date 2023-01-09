@@ -22,7 +22,7 @@ def save_uploaded_file(file_content, file_name):
 
     return file_path
 
-    m.add_basemap("HYBRID")
+    #m.add_basemap("HYBRID")
 
 def app():
 
@@ -55,8 +55,8 @@ def app():
             "Upload a vector dataset", type=["geojson", "kml", "zip", "tab"]
         )
 
-        #default_layer = gpd.read_file('data/Kufiri_Kosovee.kml', driver = 'KML')
-        #lon1, lat1 = leafmap.gdf_centroid(default_layer)
+        default_layer = gpd.read_file('data/Kufiri_Kosovee.kml', driver = 'KML')
+        lon1, lat1 = leafmap.gdf_centroid(default_layer)
 
 
         container = st.container()
