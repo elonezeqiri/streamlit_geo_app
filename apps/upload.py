@@ -22,6 +22,7 @@ def save_uploaded_file(file_content, file_name):
 
     return file_path
 
+    m.add_basemap("HYBRID")
 
 def app():
 
